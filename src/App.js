@@ -10,9 +10,10 @@ import {useStateValue} from "./StateProvider";
 
 function App() {
   const [{user},dispatch]= useStateValue();
+  console.log(user);
   return (
     <div className="app">
-      {user ? (
+      {!user ? (
       <Login />
       ):(
         <>
